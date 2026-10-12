@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContentHub – Discover What Matters</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="ContentHub Home">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Content<span class="logo-accent">Hub</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="#home"        class="nav-link active" data-section="home">Home</a>
+        <a href="#categories"  class="nav-link"        data-section="categories">Categories</a>
+        <a href="#featured"    class="nav-link"        data-section="featured">Featured</a>
+        <a href="#recommended" class="nav-link"        data-section="recommended">Recommended</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-wrap" id="searchBarWrap" aria-hidden="true">
+      <div class="container">
+        <div class="search-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" placeholder="Search YouTube videos, channels, topics…" autocomplete="off" aria-label="Search content" />
+          <button class="search-clear" id="searchClear" aria-label="Clear search" style="display:none">✕</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home" aria-labelledby="heroHeading">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+        <div class="hero-blob blob-3"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">✦ Your personal content feed</div>
+          <h1 id="heroHeading" class="hero-title">
+            Discover Content<br />
+            <span class="gradient-text">That Matters to You</span>
+          </h1>
+          <p class="hero-subtitle">
+            Explore curated YouTube videos across technology, science, health, business,
+            lifestyle, and education — all in one beautifully organized place.
+          </p>
+          <div class="hero-actions">
+            <a href="#recommended" class="btn btn-primary">
+              Explore Now
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#categories" class="btn btn-secondary">Browse Categories</a>
+          </div>
+          <div class="hero-stats" aria-label="Site statistics">
+            <div class="stat"><span class="stat-num">48+</span><span class="stat-label">Videos</span></div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat"><span class="stat-num">6</span><span class="stat-label">Categories</span></div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat"><span class="stat-num">Live</span><span class="stat-label">YouTube</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="floating-card fc-1">
+            <span class="fc-icon">💻</span>
+            <div>
+              <div class="fc-title">Technology</div>
+              <div class="fc-sub">4 articles</div>
+            </div>
+          </div>
+          <div class="floating-card fc-2">
+            <span class="fc-icon">🔬</span>
+            <div>
+              <div class="fc-title">Science</div>
+              <div class="fc-sub">3 articles</div>
+            </div>
+          </div>
+          <div class="floating-card fc-3">
+            <span class="fc-icon">🌿</span>
+            <div>
+              <div class="fc-title">Health</div>
+              <div class="fc-sub">3 articles</div>
+            </div>
+          </div>
+          <div class="floating-card fc-4">
+            <span class="fc-icon">📈</span>
+            <div>
+              <div class="fc-title">Business</div>
+              <div class="fc-sub">3 articles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEARCH RESULTS ===== -->
+    <section class="search-results-section hidden" id="searchResultsSection" aria-live="polite" aria-label="Search results">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Search Results</h2>
+          <p class="search-result-meta" id="searchResultMeta"></p>
+        </div>
+        <div class="cards-grid" id="searchResultsGrid"></div>
+        <div class="no-results hidden" id="noResults">
+          <div class="no-results-icon">🔍</div>
+          <h3>No results found</h3>
+          <p>Try different keywords or browse by category below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories-section" id="categories" aria-labelledby="categoriesHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Browse by Topic</div>
+          <h2 class="section-title" id="categoriesHeading">Explore Categories</h2>
+          <p class="section-subtitle">Pick a category to dive into curated content tailored to your interests.</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED ===== -->
+    <section class="featured-section" id="featured" aria-labelledby="featuredHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Editor's Pick</div>
+          <h2 class="section-title" id="featuredHeading">Featured Videos</h2>
+          <p class="section-subtitle">Our top picks — carefully selected videos worth your time.</p>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== RECOMMENDED ===== -->
+    <section class="recommended-section" id="recommended" aria-labelledby="recommendedHeading">
+      <div class="container">
+        <div class="section-header recommended-header">
+          <div>
+            <div class="section-badge">All Articles</div>
+            <h2 class="section-title" id="recommendedHeading">Recommended for You</h2>
+            <p class="section-subtitle">Live YouTube videos, filterable by category.</p>
+          </div>
+          <div class="filter-chips" id="filterChips" role="group" aria-label="Filter by category"></div>
+        </div>
+        <div class="cards-grid" id="recommendedGrid"></div>
+        <div class="load-more-wrap">
+          <button class="btn btn-outline" id="loadMoreBtn" aria-label="Load more articles">Load More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter-section" aria-labelledby="newsletterHeading">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <div class="newsletter-icon" aria-hidden="true">✉️</div>
+            <h2 id="newsletterHeading" class="newsletter-title">Stay in the Loop</h2>
+            <p class="newsletter-subtitle">Get the best articles delivered straight to your inbox, weekly.</p>
+            <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter subscription form">
+              <div class="newsletter-input-wrap">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email address" required />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+              <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+              <p class="newsletter-msg hidden" id="newsletterMsg" role="alert"></p>
+            </form>
+          </div>
+          <div class="newsletter-decoration" aria-hidden="true">
+            <div class="nd-blob"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="ContentHub Home">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">Content<span class="logo-accent">Hub</span></span>
+        </a>
+        <p class="footer-tagline">Discover content that moves you.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Categories</h3>
+          <ul>
+            <li><a href="#" data-filter="technology">Technology</a></li>
+            <li><a href="#" data-filter="science">Science</a></li>
+            <li><a href="#" data-filter="health">Health</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">More Topics</h3>
+          <ul>
+            <li><a href="#" data-filter="business">Business</a></li>
+            <li><a href="#" data-filter="lifestyle">Lifestyle</a></li>
+            <li><a href="#" data-filter="education">Education</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Navigate</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#recommended">All Articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 ContentHub · Mini Project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== VIDEO MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close video">✕</button>
+
+      <!-- YouTube iframe player -->
+      <div class="modal-player-wrap">
+        <div class="modal-player" id="modalPlayer"></div>
+        <span class="modal-category-badge" id="modalCategoryBadge"></span>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span id="modalDate"></span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span id="modalReadTime"></span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span id="modalAuthor"></span>
+        </div>
+        <h2 id="modalTitle" class="modal-title"></h2>
+
+        <!-- View / like counts -->
+        <div class="modal-stats" id="modalStats"></div>
+
+        <div class="modal-tags" id="modalTags"></div>
+        <p id="modalDescription" class="modal-description"></p>
+
+        <div class="modal-actions">
+          <a id="modalYtLink" href="#" target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Watch on YouTube
+          </a>
+        </div>
+
+        <div class="modal-author-card">
+          <div class="author-avatar" id="modalAuthorAvatar"></div>
+          <div>
+            <div class="author-name" id="modalAuthorName"></div>
+            <div class="author-role">YouTube Channel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
